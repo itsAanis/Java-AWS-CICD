@@ -1,0 +1,32 @@
+<settings>
+<servers>
+  <server>
+    <id>khunfamily-java-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>khunfamily-java-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>khunfamily-java-cicd</id>
+        <url>https://khunfamily-140023367771.d.codeartifact.eu-west-2.amazonaws.com/maven/java-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>khunfamily-java-cicd</id>
+    <name>khunfamily-java-cicd</name>
+    <url>https://khunfamily-140023367771.d.codeartifact.eu-west-2.amazonaws.com/maven/java-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</settings>
